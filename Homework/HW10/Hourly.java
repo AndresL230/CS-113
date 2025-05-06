@@ -27,4 +27,9 @@ public class Hourly extends Employee
       result += "\nCurrent hours: " + hoursWorked;
       return result;
    }
+
+   public int vacation()
+   {
+      return 5;
+   }
 }

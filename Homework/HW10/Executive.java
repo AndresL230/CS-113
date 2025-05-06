@@ -8,9 +8,16 @@ public class Executive extends Employee
       bonus = 0;
    }
 
-   public void awardBonus (double execBonus)
+   public void awardBonus(double execBonus) throws BonusTooHighException
    {
+      if (execBonus>10000)
+         throw new BonusTooHighException("Error: Bonus Greater than $10,000");
       bonus = execBonus;
+   }
+
+   public double getBonus()
+   {
+      return bonus;
    }
    
    public double pay()
@@ -18,5 +25,10 @@ public class Executive extends Employee
       double payment = super.pay() + bonus;
       bonus = 0;
       return payment;
+   }
+
+   public int vacation()
+   {
+      return 20;
    }
 }
