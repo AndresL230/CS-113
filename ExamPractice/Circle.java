@@ -1,29 +1,24 @@
 public class Circle
 {
-   private Point center;
-   private float radius;
+   protected double radius;
    
-   public Circle(int x, int y, float radius)
-   {
-      this.radius = radius;
-      
-      this.center = new Point(x,y);
+   public Circle(double r) {
+      radius=r;
    }
    
-   public Point getCenter()
-   {
-      return center;
+   public void setRadius(double r) {
+      radius = r;
    }
    
-   public void setRadius(float radius)
-   {
-      this.radius = radius;
+   public double getRadius() {
+      return radius;
    }
    
-   public boolean liesOnCircle(Point other)
-   {
-      double distance = center.distance(other);
-      
-      return distance == this.radius;
+   public double area() {
+      return Math.PI * radius * radius;
+   }
+   
+   public String toString() {
+      return "Circle:Radius= " + radius;
    }
 }
