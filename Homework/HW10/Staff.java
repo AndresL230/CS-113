@@ -17,7 +17,7 @@ public class Staff
       "555-8374") ;
       staffList[5] = new Volunteer ("Cliff", "321 Duds Lane",
       "555-7282");
-      ((Executive)staffList[0]).awardBonus (500.00);
+      ((Executive)staffList[0]).awardBonus(500.00);
       ((Hourly)staffList[3]).addHours (40);
       staffList[4].toString();
    }
